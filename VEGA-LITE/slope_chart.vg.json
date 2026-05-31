@@ -38,8 +38,8 @@
       "transform": [{ "filter": "datum.year === '2024'" }],
       "encoding": {
         "x": { "field": "year", "type": "ordinal" },
-        "y": { "datum": 0.95, "type": "quantitative" },
-        "y2": { "datum": 0.4 }
+        "y": { "value": 0 },
+        "y2": { "signal": "height" }
       }
     },
     {
@@ -47,8 +47,8 @@
       "transform": [{ "filter": "datum.year === '2028'" }],
       "encoding": {
         "x": { "field": "year", "type": "ordinal" },
-        "y": { "datum": 0.95, "type": "quantitative" },
-        "y2": { "datum": 0.4 }
+        "y": { "value": 0 },
+        "y2": { "signal": "height" }
       }
     },
     {
