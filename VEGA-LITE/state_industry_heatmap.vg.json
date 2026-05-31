@@ -24,7 +24,7 @@
       "titleFontWeight": "normal"
     }
   },
-  "data": { "url": "../data/state_industry_heatmap.csv" },
+  "data": { "url": "data/state_industry_heatmap.csv" },
   "layer": [
     {
       "mark": { "type": "rect" },

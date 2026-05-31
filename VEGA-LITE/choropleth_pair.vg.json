@@ -40,12 +40,12 @@
       },
       "width": 270, 
       "height": 215,
-      "data": { "url": "../data/state_adoption_projection.csv" },
+      "data": { "url": "data/state_adoption_projection.csv" },
       "transform": [
         {
           "lookup": "state",
           "from": {
-            "data": { "url": "../data/STE_2016_AUST.json", "format": { "type": "topojson", "feature": "STE_2016_AUST" } },
+            "data": { "url": "data/STE_2016_AUST.json", "format": { "type": "topojson", "feature": "STE_2016_AUST" } },
             "key": "properties.STE_NAME16"
           },
           "as": "geo"
@@ -92,12 +92,12 @@
         "color": "#4a4640", "anchor": "middle"
       },
       "width": 270, "height": 215,
-      "data": { "url": "../data/state_adoption_projection.csv" },
+      "data": { "url": "data/state_adoption_projection.csv" },
       "transform": [
         {
           "lookup": "state",
           "from": {
-            "data": { "url": "../data/STE_2016_AUST.json", "format": { "type": "topojson", "feature": "STE_2016_AUST" } },
+            "data": { "url": "data/STE_2016_AUST.json", "format": { "type": "topojson", "feature": "STE_2016_AUST" } },
             "key": "properties.STE_NAME16"
           },
           "as": "geo"

@@ -18,7 +18,7 @@
     }
   },
 
-  "data": { "url": "../data/metro_regional_adoption.csv" },
+  "data": { "url": "data/metro_regional_adoption.csv" },
 
   "transform": [
     { "calculate": "datum.metro - datum.regional", "as": "gap" },

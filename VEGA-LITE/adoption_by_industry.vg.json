@@ -8,7 +8,7 @@
   "data": [
     {
       "name": "table",
-      "url": "../data/adoption_by_industry.csv",
+      "url": "data/adoption_by_industry.csv",
       "format": {"type": "csv", "parse": {"adopting": "number", "not_adopting": "number", "not_aware": "number"}},
       "transform": [
         {

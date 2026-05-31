@@ -20,7 +20,7 @@
       "gridWidth": 1
     }
   },
-  "data": { "url": "../data/demand.csv" },
+  "data": { "url": "data/demand.csv" },
   "layer": [
     {
       "mark": { "type": "area", "opacity": 0.3, "color": "#de1e1c", "line": false, "interpolate": "monotone" }

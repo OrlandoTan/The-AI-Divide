@@ -7,7 +7,7 @@
     "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
     "view": { "stroke": null }
   },
-  "data": { "url": "../data/slope_data.csv" },
+  "data": { "url": "data/slope_data.csv" },
   "transform": [
     {
       "calculate": "datum.growth >= 0.10 ? 'rising' : datum.growth <= 0.058 ? 'flat' : 'mid'",

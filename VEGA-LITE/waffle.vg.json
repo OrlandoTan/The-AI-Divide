@@ -7,7 +7,7 @@
     "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
     "view": { "stroke": null }
   },
-  "data": { "url": "../data/waffle.csv" },
+  "data": { "url": "data/waffle.csv" },
   "layer": [
     {
       "comment": "Waffle squares",

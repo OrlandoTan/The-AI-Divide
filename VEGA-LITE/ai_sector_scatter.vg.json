@@ -20,7 +20,7 @@
       "gridWidth": 1
     }
   },
-  "data": { "url": "../data/ai_sector_scatter.csv" },
+  "data": { "url": "data/ai_sector_scatter.csv" },
   "transform": [
     {
       "calculate": "datum.companies > 200 && datum.ai_job_pct >= 2 ? 'high' : datum.companies > 200 ? 'many-low' : datum.ai_job_pct >= 2 ? 'few-high' : 'low'",
