@@ -34,21 +34,12 @@
   },
   "layer": [
     {
-      "mark": { "type": "rule", "color": "#4a4640", "strokeWidth": 2, "opacity": 0.1 },
-      "transform": [{ "filter": "datum.year === '2024'" }],
+      "mark": { "type": "rule", "color": "#4a4640", "strokeWidth": 1, "opacity": 0.1 },
+      "transform": [{ "filter": "datum.state === 'Australian Capital Territory'" }],
       "encoding": {
         "x": { "field": "year", "type": "ordinal" },
-        "y": { "value": 0 },
-        "y2": { "signal": "height" }
-      }
-    },
-    {
-      "mark": { "type": "rule", "color": "#4a4640", "strokeWidth": 2, "opacity": 0.1 },
-      "transform": [{ "filter": "datum.year === '2028'" }],
-      "encoding": {
-        "x": { "field": "year", "type": "ordinal" },
-        "y": { "value": 0 },
-        "y2": { "signal": "height" }
+        "y": { "datum": 0.95, "type": "quantitative" },
+        "y2": { "datum": 0.4 }
       }
     },
     {
@@ -56,12 +47,15 @@
       "mark": { "type": "text", "dy": -12, "fontSize": 11, "fontWeight": 600, "color": "#4a4640" },
       "encoding": {
         "x": { "field": "year", "type": "ordinal" },
-        "y": { "value": 0 },
+        "y": { "datum": 0.95, "type": "quantitative" },
         "text": { "field": "year" }
       }
     },
     {
-      "mark": { "type": "line", "strokeWidth": 2, "interpolate": "linear" },
+      "params": [
+        { "name": "state_hover", "select": { "type": "point", "fields": ["state"], "on": "pointerover", "clear": "pointerout" } }
+      ],
+      "mark": { "type": "line", "interpolate": "linear" },
       "encoding": {
         "color": {
           "field": "tier", "type": "nominal",
@@ -72,12 +66,12 @@
           "legend": null
         },
         "opacity": {
-          "field": "tier", "type": "nominal",
-          "scale": {
-            "domain": ["rising", "mid", "flat"],
-            "range":  [1, 0.75, 0.5]
-          },
-          "legend": null
+          "condition": { "param": "state_hover", "empty": true, "value": 1 },
+          "value": 0.15
+        },
+        "strokeWidth": {
+          "condition": { "param": "state_hover", "empty": false, "value": 3.5 },
+          "value": 2
         }
       }
     },
@@ -91,7 +85,16 @@
             "range":  ["#de1e1c", "#c9b5b0", "#d4cfc9"]
           },
           "legend": null
-        }
+        },
+        "opacity": {
+          "condition": { "param": "state_hover", "empty": true, "value": 1 },
+          "value": 0.15
+        },
+        "tooltip": [
+          { "field": "state", "title": "State" },
+          { "field": "adoption", "title": "Adoption rate", "format": ".0%" },
+          { "field": "year", "title": "Year" }
+        ]
       }
     },
     {

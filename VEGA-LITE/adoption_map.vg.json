@@ -39,29 +39,44 @@
       }
     }
   ],
-  "mark": {
-    "type": "geoshape",
-    "stroke": "#f7f7f7",
-    "strokeWidth": 1.5
-  },
-  "encoding": {
-    "color": {
-      "field": "ai_adoption",
-      "type": "quantitative",
-      "scale": {
-        "domain": [0.4, 0.8],
-        "range": ["#d4cfc9", "#1a1814"]
+  "layer": [
+    {
+      "params": [
+        { "name": "state_hover", "select": { "type": "point", "on": "pointerover", "clear": "pointerout" } }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#f7f7f7",
+        "strokeWidth": 1.5
       },
-      "legend": {
-        "title": "AI Adoption Rate",
-        "format": ".0%",
-        "orient": "top-right",
-        "offset": 8
+      "encoding": {
+        "color": {
+          "field": "ai_adoption",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0.4, 0.8],
+            "range": ["#d4cfc9", "#1a1814"]
+          },
+          "legend": {
+            "title": "AI Adoption Rate",
+            "format": ".0%",
+            "orient": "top-right",
+            "offset": 8
+          }
+        },
+        "stroke": {
+          "condition": { "param": "state_hover", "empty": false, "value": "#de1e1c" },
+          "value": "#f7f7f7"
+        },
+        "strokeWidth": {
+          "condition": { "param": "state_hover", "empty": false, "value": 2.5 },
+          "value": 1.5
+        },
+        "tooltip": [
+          { "field": "properties.STE_NAME16", "type": "nominal", "title": "State" },
+          { "field": "ai_adoption", "type": "quantitative", "title": "AI Adoption", "format": ".0%" }
+        ]
       }
-    },
-    "tooltip": [
-      { "field": "properties.STE_NAME16", "type": "nominal", "title": "State" },
-      { "field": "ai_adoption", "type": "quantitative", "title": "AI Adoption", "format": ".0%" }
-    ]
-  }
+    }
+  ]
 }
