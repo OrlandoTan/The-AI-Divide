@@ -5,14 +5,726 @@
   "background": "transparent",
   "config": {
     "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
-    "view": { "stroke": null }
+    "view": {
+      "stroke": null
+    }
   },
-  "data": { "url": "../data/waffle.csv" },
+  "data": {
+    "values": [
+      {
+        "id": 1,
+        "col": 0,
+        "row": 0,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 2,
+        "col": 1,
+        "row": 0,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 3,
+        "col": 2,
+        "row": 0,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 4,
+        "col": 3,
+        "row": 0,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 5,
+        "col": 4,
+        "row": 0,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 6,
+        "col": 5,
+        "row": 0,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 7,
+        "col": 6,
+        "row": 0,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 8,
+        "col": 7,
+        "row": 0,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 9,
+        "col": 8,
+        "row": 0,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 10,
+        "col": 9,
+        "row": 0,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 11,
+        "col": 0,
+        "row": 1,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 12,
+        "col": 1,
+        "row": 1,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 13,
+        "col": 2,
+        "row": 1,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 14,
+        "col": 3,
+        "row": 1,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 15,
+        "col": 4,
+        "row": 1,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 16,
+        "col": 5,
+        "row": 1,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 17,
+        "col": 6,
+        "row": 1,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 18,
+        "col": 7,
+        "row": 1,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 19,
+        "col": 8,
+        "row": 1,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 20,
+        "col": 9,
+        "row": 1,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 21,
+        "col": 0,
+        "row": 2,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 22,
+        "col": 1,
+        "row": 2,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 23,
+        "col": 2,
+        "row": 2,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 24,
+        "col": 3,
+        "row": 2,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 25,
+        "col": 4,
+        "row": 2,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 26,
+        "col": 5,
+        "row": 2,
+        "category": "Adopting AI",
+        "is_you": "yes"
+      },
+      {
+        "id": 27,
+        "col": 6,
+        "row": 2,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 28,
+        "col": 7,
+        "row": 2,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 29,
+        "col": 8,
+        "row": 2,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 30,
+        "col": 9,
+        "row": 2,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 31,
+        "col": 0,
+        "row": 3,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 32,
+        "col": 1,
+        "row": 3,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 33,
+        "col": 2,
+        "row": 3,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 34,
+        "col": 3,
+        "row": 3,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 35,
+        "col": 4,
+        "row": 3,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 36,
+        "col": 5,
+        "row": 3,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 37,
+        "col": 6,
+        "row": 3,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 38,
+        "col": 7,
+        "row": 3,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 39,
+        "col": 8,
+        "row": 3,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 40,
+        "col": 9,
+        "row": 3,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 41,
+        "col": 0,
+        "row": 4,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 42,
+        "col": 1,
+        "row": 4,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 43,
+        "col": 2,
+        "row": 4,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 44,
+        "col": 3,
+        "row": 4,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 45,
+        "col": 4,
+        "row": 4,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 46,
+        "col": 5,
+        "row": 4,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 47,
+        "col": 6,
+        "row": 4,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 48,
+        "col": 7,
+        "row": 4,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 49,
+        "col": 8,
+        "row": 4,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 50,
+        "col": 9,
+        "row": 4,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 51,
+        "col": 0,
+        "row": 5,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 52,
+        "col": 1,
+        "row": 5,
+        "category": "Adopting AI",
+        "is_you": "no"
+      },
+      {
+        "id": 53,
+        "col": 2,
+        "row": 5,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 54,
+        "col": 3,
+        "row": 5,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 55,
+        "col": 4,
+        "row": 5,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 56,
+        "col": 5,
+        "row": 5,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 57,
+        "col": 6,
+        "row": 5,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 58,
+        "col": 7,
+        "row": 5,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 59,
+        "col": 8,
+        "row": 5,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 60,
+        "col": 9,
+        "row": 5,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 61,
+        "col": 0,
+        "row": 6,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 62,
+        "col": 1,
+        "row": 6,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 63,
+        "col": 2,
+        "row": 6,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 64,
+        "col": 3,
+        "row": 6,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 65,
+        "col": 4,
+        "row": 6,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 66,
+        "col": 5,
+        "row": 6,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 67,
+        "col": 6,
+        "row": 6,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 68,
+        "col": 7,
+        "row": 6,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 69,
+        "col": 8,
+        "row": 6,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 70,
+        "col": 9,
+        "row": 6,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 71,
+        "col": 0,
+        "row": 7,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 72,
+        "col": 1,
+        "row": 7,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 73,
+        "col": 2,
+        "row": 7,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 74,
+        "col": 3,
+        "row": 7,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 75,
+        "col": 4,
+        "row": 7,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 76,
+        "col": 5,
+        "row": 7,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 77,
+        "col": 6,
+        "row": 7,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 78,
+        "col": 7,
+        "row": 7,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 79,
+        "col": 8,
+        "row": 7,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 80,
+        "col": 9,
+        "row": 7,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 81,
+        "col": 0,
+        "row": 8,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 82,
+        "col": 1,
+        "row": 8,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 83,
+        "col": 2,
+        "row": 8,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 84,
+        "col": 3,
+        "row": 8,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 85,
+        "col": 4,
+        "row": 8,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 86,
+        "col": 5,
+        "row": 8,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 87,
+        "col": 6,
+        "row": 8,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 88,
+        "col": 7,
+        "row": 8,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 89,
+        "col": 8,
+        "row": 8,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 90,
+        "col": 9,
+        "row": 8,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 91,
+        "col": 0,
+        "row": 9,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 92,
+        "col": 1,
+        "row": 9,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 93,
+        "col": 2,
+        "row": 9,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 94,
+        "col": 3,
+        "row": 9,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 95,
+        "col": 4,
+        "row": 9,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 96,
+        "col": 5,
+        "row": 9,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 97,
+        "col": 6,
+        "row": 9,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 98,
+        "col": 7,
+        "row": 9,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 99,
+        "col": 8,
+        "row": 9,
+        "category": "Not adopting",
+        "is_you": "no"
+      },
+      {
+        "id": 100,
+        "col": 9,
+        "row": 9,
+        "category": "Not adopting",
+        "is_you": "no"
+      }
+    ]
+  },
   "layer": [
     {
       "comment": "Waffle squares",
       "params": [
-        { "name": "sq_hover", "select": { "type": "point", "on": "pointerover", "clear": "pointerout" } }
+        {
+          "name": "sq_hover",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
       ],
       "mark": {
         "type": "rect",
@@ -34,8 +746,14 @@
           "field": "category",
           "type": "nominal",
           "scale": {
-            "domain": ["Adopting AI", "Not adopting"],
-            "range":  ["#de1e1c",    "#e0dbd4"   ]
+            "domain": [
+              "Adopting AI",
+              "Not adopting"
+            ],
+            "range": [
+              "#de1e1c",
+              "#e0dbd4"
+            ]
           },
           "legend": {
             "title": null,
@@ -49,28 +767,53 @@
         },
         "opacity": {
           "condition": [
-            { "test": "datum.is_you === 'yes'", "value": 1 },
-            { "param": "sq_hover", "empty": false, "value": 1 }
+            {
+              "test": "datum.is_you === 'yes'",
+              "value": 1
+            },
+            {
+              "param": "sq_hover",
+              "empty": false,
+              "value": 1
+            }
           ],
           "value": 0.75
         },
         "strokeWidth": {
-          "condition": { "param": "sq_hover", "empty": false, "value": 2 },
+          "condition": {
+            "param": "sq_hover",
+            "empty": false,
+            "value": 2
+          },
           "value": 0
         },
         "stroke": {
-          "condition": { "param": "sq_hover", "empty": false, "value": "#1a1814" },
+          "condition": {
+            "param": "sq_hover",
+            "empty": false,
+            "value": "#1a1814"
+          },
           "value": "transparent"
         },
         "tooltip": [
-          { "field": "category", "title": "Status" },
-          { "field": "id",       "title": "Business #" }
+          {
+            "field": "category",
+            "title": "Status"
+          },
+          {
+            "field": "id",
+            "title": "Business #"
+          }
         ]
       }
     },
     {
       "comment": "YOU label on square 26",
-      "transform": [{ "filter": "datum.is_you === 'yes'" }],
+      "transform": [
+        {
+          "filter": "datum.is_you === 'yes'"
+        }
+      ],
       "mark": {
         "type": "text",
         "fontSize": 7,
@@ -80,9 +823,18 @@
         "align": "center"
       },
       "encoding": {
-        "x": { "field": "col", "type": "ordinal" },
-        "y": { "field": "row", "type": "ordinal", "sort": "descending" },
-        "text": { "value": "YOU?" }
+        "x": {
+          "field": "col",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "row",
+          "type": "ordinal",
+          "sort": "descending"
+        },
+        "text": {
+          "value": "YOU?"
+        }
       }
     }
   ]

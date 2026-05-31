@@ -5,7 +5,9 @@
   "background": "transparent",
   "config": {
     "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
-    "view": { "stroke": null },
+    "view": {
+      "stroke": null
+    },
     "axis": {
       "labelColor": "#4a4640",
       "labelFontSize": 10,
@@ -20,7 +22,70 @@
       "gridWidth": 1
     }
   },
-  "data": { "url": "../data/ai_sector_scatter.csv" },
+  "data": {
+    "values": [
+      {
+        "sector": "Business processes & support",
+        "companies": 494,
+        "ai_job_pct": 2.3,
+        "anzsic_match": "Professional, scientific & technical"
+      },
+      {
+        "sector": "IT infrastructure & hosting",
+        "companies": 346,
+        "ai_job_pct": 4.2,
+        "anzsic_match": "Information media & telecoms"
+      },
+      {
+        "sector": "Media, social & marketing",
+        "companies": 255,
+        "ai_job_pct": 0.6,
+        "anzsic_match": "Arts & recreation services"
+      },
+      {
+        "sector": "Healthcare & biotech",
+        "companies": 184,
+        "ai_job_pct": 0.8,
+        "anzsic_match": "Healthcare & social assistance"
+      },
+      {
+        "sector": "Education & training",
+        "companies": 166,
+        "ai_job_pct": 2.6,
+        "anzsic_match": "Education & training"
+      },
+      {
+        "sector": "Digital security",
+        "companies": 163,
+        "ai_job_pct": 0.7,
+        "anzsic_match": "Public administration & safety"
+      },
+      {
+        "sector": "Financial & insurance",
+        "companies": 132,
+        "ai_job_pct": 2.1,
+        "anzsic_match": "Financial & insurance services"
+      },
+      {
+        "sector": "Govt, security & defence",
+        "companies": 99,
+        "ai_job_pct": 0.7,
+        "anzsic_match": "Public administration & safety"
+      },
+      {
+        "sector": "Logistics, wholesale & retail",
+        "companies": 93,
+        "ai_job_pct": 0.4,
+        "anzsic_match": "Transport, postal & warehousing"
+      },
+      {
+        "sector": "Environmental services",
+        "companies": 90,
+        "ai_job_pct": 1.1,
+        "anzsic_match": "Electricity, gas, water & waste"
+      }
+    ]
+  },
   "transform": [
     {
       "calculate": "datum.companies > 200 && datum.ai_job_pct >= 2 ? 'high' : datum.companies > 200 ? 'many-low' : datum.ai_job_pct >= 2 ? 'few-high' : 'low'",
@@ -29,44 +94,157 @@
   ],
   "layer": [
     {
-      "data": { "values": [
-        { "x1": 0,   "x2": 200, "y1": 2, "y2": 5, "q": "few-high" },
-        { "x1": 200, "x2": 540, "y1": 2, "y2": 5, "q": "high" },
-        { "x1": 0,   "x2": 200, "y1": 0, "y2": 2, "q": "low" },
-        { "x1": 200, "x2": 540, "y1": 0, "y2": 2, "q": "many-low" }
-      ]},
-      "mark": { "type": "rect", "opacity": 0.06 },
+      "data": {
+        "values": [
+          {
+            "x1": 0,
+            "x2": 200,
+            "y1": 2,
+            "y2": 5,
+            "q": "few-high"
+          },
+          {
+            "x1": 200,
+            "x2": 540,
+            "y1": 2,
+            "y2": 5,
+            "q": "high"
+          },
+          {
+            "x1": 0,
+            "x2": 200,
+            "y1": 0,
+            "y2": 2,
+            "q": "low"
+          },
+          {
+            "x1": 200,
+            "x2": 540,
+            "y1": 0,
+            "y2": 2,
+            "q": "many-low"
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "opacity": 0.06
+      },
       "encoding": {
-        "x":  { "field": "x1", "type": "quantitative", "scale": { "domain": [0, 540] } },
-        "x2": { "field": "x2", "type": "quantitative" },
-        "y":  { "field": "y1", "type": "quantitative", "scale": { "domain": [0, 5] } },
-        "y2": { "field": "y2", "type": "quantitative" },
+        "x": {
+          "field": "x1",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              540
+            ]
+          }
+        },
+        "x2": {
+          "field": "x2",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "y1",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              5
+            ]
+          }
+        },
+        "y2": {
+          "field": "y2",
+          "type": "quantitative"
+        },
         "color": {
           "condition": [
-            { "test": "datum.q === 'high'",     "value": "#de1e1c" },
-            { "test": "datum.q === 'few-high'", "value": "#f0a090" },
-            { "test": "datum.q === 'low'",      "value": "#4a4640" },
-            { "test": "datum.q === 'many-low'", "value": "#9a9690" }
+            {
+              "test": "datum.q === 'high'",
+              "value": "#de1e1c"
+            },
+            {
+              "test": "datum.q === 'few-high'",
+              "value": "#f0a090"
+            },
+            {
+              "test": "datum.q === 'low'",
+              "value": "#4a4640"
+            },
+            {
+              "test": "datum.q === 'many-low'",
+              "value": "#9a9690"
+            }
           ],
           "value": "#9a9690"
         }
       }
     },
     {
-      "mark": { "type": "rule", "color": "#e0dbd4", "strokeWidth": 1, "strokeDash": [4, 4] },
-      "encoding": { "x": { "datum": 200, "type": "quantitative" } }
+      "mark": {
+        "type": "rule",
+        "color": "#e0dbd4",
+        "strokeWidth": 1,
+        "strokeDash": [
+          4,
+          4
+        ]
+      },
+      "encoding": {
+        "x": {
+          "datum": 200,
+          "type": "quantitative"
+        }
+      }
     },
     {
-      "mark": { "type": "rule", "color": "#e0dbd4", "strokeWidth": 1, "strokeDash": [4, 4] },
-      "encoding": { "y": { "datum": 2.0, "type": "quantitative" } }
+      "mark": {
+        "type": "rule",
+        "color": "#e0dbd4",
+        "strokeWidth": 1,
+        "strokeDash": [
+          4,
+          4
+        ]
+      },
+      "encoding": {
+        "y": {
+          "datum": 2.0,
+          "type": "quantitative"
+        }
+      }
     },
     {
-      "data": { "values": [
-        { "x": 0,   "y": 5, "label": "Few companies,\nhigh demand",  "c": "#f0a090" },
-        { "x": 200, "y": 5, "label": "Many companies,\nhigh demand", "c": "#de1e1c" },
-        { "x": 0,   "y": 2, "label": "Few companies,\nlow demand",   "c": "#4a4640" },
-        { "x": 200, "y": 2, "label": "Many companies,\nlow demand",  "c": "#9a9690" }
-      ]},
+      "data": {
+        "values": [
+          {
+            "x": 0,
+            "y": 5,
+            "label": "Few companies,\nhigh demand",
+            "c": "#f0a090"
+          },
+          {
+            "x": 200,
+            "y": 5,
+            "label": "Many companies,\nhigh demand",
+            "c": "#de1e1c"
+          },
+          {
+            "x": 0,
+            "y": 2,
+            "label": "Few companies,\nlow demand",
+            "c": "#4a4640"
+          },
+          {
+            "x": 200,
+            "y": 2,
+            "label": "Many companies,\nlow demand",
+            "c": "#9a9690"
+          }
+        ]
+      },
       "mark": {
         "type": "text",
         "fontSize": 8.5,
@@ -80,70 +258,170 @@
         "lineBreak": "\n"
       },
       "encoding": {
-        "x": { "field": "x", "type": "quantitative" },
-        "y": { "field": "y", "type": "quantitative" },
-        "text": { "field": "label" },
-        "color": { "field": "c", "type": "nominal", "scale": null, "legend": null }
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        },
+        "color": {
+          "field": "c",
+          "type": "nominal",
+          "scale": null,
+          "legend": null
+        }
       }
     },
     {
       "params": [
-        { "name": "hover", "select": { "type": "point", "on": "mouseover", "clear": "mouseout" } }
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }
       ],
-      "mark": { "type": "point", "filled": true, "size": 90 },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 90
+      },
       "encoding": {
         "x": {
-          "field": "companies", "type": "quantitative",
+          "field": "companies",
+          "type": "quantitative",
           "title": "Number of AI companies",
-          "scale": { "domain": [0, 540] }
+          "scale": {
+            "domain": [
+              0,
+              540
+            ]
+          }
         },
         "y": {
-          "field": "ai_job_pct", "type": "quantitative",
+          "field": "ai_job_pct",
+          "type": "quantitative",
           "title": "AI job demand (% of sector postings)",
-          "scale": { "domain": [0, 5] },
-          "axis": { "labelExpr": "datum.value + '%'" }
+          "scale": {
+            "domain": [
+              0,
+              5
+            ]
+          },
+          "axis": {
+            "labelExpr": "datum.value + '%'"
+          }
         },
         "color": {
           "condition": [
-            { "test": "datum.quadrant === 'high'",     "value": "#de1e1c" },
-            { "test": "datum.quadrant === 'few-high'", "value": "#f0a090" },
-            { "test": "datum.quadrant === 'low'",      "value": "#4a4640" },
-            { "test": "datum.quadrant === 'many-low'", "value": "#9a9690" }
+            {
+              "test": "datum.quadrant === 'high'",
+              "value": "#de1e1c"
+            },
+            {
+              "test": "datum.quadrant === 'few-high'",
+              "value": "#f0a090"
+            },
+            {
+              "test": "datum.quadrant === 'low'",
+              "value": "#4a4640"
+            },
+            {
+              "test": "datum.quadrant === 'many-low'",
+              "value": "#9a9690"
+            }
           ],
           "value": "#4a4640"
         },
         "size": {
-          "condition": { "param": "hover", "empty": false, "value": 200 },
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": 200
+          },
           "value": 90
         },
         "opacity": {
-          "condition": { "param": "hover", "empty": false, "value": 1 },
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": 1
+          },
           "value": 0.85
         },
         "tooltip": [
-          { "field": "sector",       "title": "Sector" },
-          { "field": "companies",    "title": "AI companies" },
-          { "field": "ai_job_pct",   "title": "Job demand %", "format": ".1f" },
-          { "field": "anzsic_match", "title": "ANZSIC source" }
+          {
+            "field": "sector",
+            "title": "Sector"
+          },
+          {
+            "field": "companies",
+            "title": "AI companies"
+          },
+          {
+            "field": "ai_job_pct",
+            "title": "Job demand %",
+            "format": ".1f"
+          },
+          {
+            "field": "anzsic_match",
+            "title": "ANZSIC source"
+          }
         ]
       }
     },
     {
-      "mark": { "type": "text", "fontSize": 8.5, "dy": -11, "align": "center" },
+      "mark": {
+        "type": "text",
+        "fontSize": 8.5,
+        "dy": -11,
+        "align": "center"
+      },
       "encoding": {
-        "x": { "field": "companies",  "type": "quantitative" },
-        "y": { "field": "ai_job_pct", "type": "quantitative" },
-        "text": { "field": "sector" },
+        "x": {
+          "field": "companies",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "ai_job_pct",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "sector"
+        },
         "opacity": {
-          "condition": { "param": "hover", "empty": false, "value": 1 },
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": 1
+          },
           "value": 0.75
         },
         "color": {
           "condition": [
-            { "test": "datum.quadrant === 'high'",     "value": "#de1e1c" },
-            { "test": "datum.quadrant === 'few-high'", "value": "#f0a090" },
-            { "test": "datum.quadrant === 'low'",      "value": "#4a4640" },
-            { "test": "datum.quadrant === 'many-low'", "value": "#9a9690" }
+            {
+              "test": "datum.quadrant === 'high'",
+              "value": "#de1e1c"
+            },
+            {
+              "test": "datum.quadrant === 'few-high'",
+              "value": "#f0a090"
+            },
+            {
+              "test": "datum.quadrant === 'low'",
+              "value": "#4a4640"
+            },
+            {
+              "test": "datum.quadrant === 'many-low'",
+              "value": "#9a9690"
+            }
           ],
           "value": "#4a4640"
         }

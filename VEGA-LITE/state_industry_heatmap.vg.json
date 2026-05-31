@@ -5,7 +5,9 @@
   "background": "transparent",
   "config": {
     "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
-    "view": { "stroke": null },
+    "view": {
+      "stroke": null
+    },
     "axis": {
       "labelColor": "#4a4640",
       "labelFontSize": 10,
@@ -24,34 +26,392 @@
       "titleFontWeight": "normal"
     }
   },
-  "data": { "url": "../data/state_industry_heatmap.csv" },
+  "data": {
+    "values": [
+      {
+        "state": "ACT",
+        "industry": "Services",
+        "adoption_pct": 100.0
+      },
+      {
+        "state": "ACT",
+        "industry": "Retail trade",
+        "adoption_pct": 93.8
+      },
+      {
+        "state": "ACT",
+        "industry": "Distribution",
+        "adoption_pct": 72.9
+      },
+      {
+        "state": "ACT",
+        "industry": "Construction",
+        "adoption_pct": 70.8
+      },
+      {
+        "state": "ACT",
+        "industry": "Agriculture",
+        "adoption_pct": 66.7
+      },
+      {
+        "state": "ACT",
+        "industry": "Health and education",
+        "adoption_pct": 64.6
+      },
+      {
+        "state": "ACT",
+        "industry": "Hospitality",
+        "adoption_pct": 64.6
+      },
+      {
+        "state": "ACT",
+        "industry": "Manufacturing",
+        "adoption_pct": 62.5
+      },
+      {
+        "state": "VIC",
+        "industry": "Services",
+        "adoption_pct": 96.0
+      },
+      {
+        "state": "VIC",
+        "industry": "Retail trade",
+        "adoption_pct": 90.0
+      },
+      {
+        "state": "VIC",
+        "industry": "Distribution",
+        "adoption_pct": 70.0
+      },
+      {
+        "state": "VIC",
+        "industry": "Construction",
+        "adoption_pct": 68.0
+      },
+      {
+        "state": "VIC",
+        "industry": "Agriculture",
+        "adoption_pct": 64.0
+      },
+      {
+        "state": "VIC",
+        "industry": "Health and education",
+        "adoption_pct": 62.0
+      },
+      {
+        "state": "VIC",
+        "industry": "Hospitality",
+        "adoption_pct": 62.0
+      },
+      {
+        "state": "VIC",
+        "industry": "Manufacturing",
+        "adoption_pct": 60.0
+      },
+      {
+        "state": "NSW",
+        "industry": "Services",
+        "adoption_pct": 90.7
+      },
+      {
+        "state": "NSW",
+        "industry": "Retail trade",
+        "adoption_pct": 85.0
+      },
+      {
+        "state": "NSW",
+        "industry": "Distribution",
+        "adoption_pct": 66.1
+      },
+      {
+        "state": "NSW",
+        "industry": "Construction",
+        "adoption_pct": 64.2
+      },
+      {
+        "state": "NSW",
+        "industry": "Agriculture",
+        "adoption_pct": 60.4
+      },
+      {
+        "state": "NSW",
+        "industry": "Health and education",
+        "adoption_pct": 58.6
+      },
+      {
+        "state": "NSW",
+        "industry": "Hospitality",
+        "adoption_pct": 58.6
+      },
+      {
+        "state": "NSW",
+        "industry": "Manufacturing",
+        "adoption_pct": 56.7
+      },
+      {
+        "state": "QLD",
+        "industry": "Services",
+        "adoption_pct": 81.3
+      },
+      {
+        "state": "QLD",
+        "industry": "Retail trade",
+        "adoption_pct": 76.2
+      },
+      {
+        "state": "QLD",
+        "industry": "Distribution",
+        "adoption_pct": 59.3
+      },
+      {
+        "state": "QLD",
+        "industry": "Construction",
+        "adoption_pct": 57.6
+      },
+      {
+        "state": "QLD",
+        "industry": "Agriculture",
+        "adoption_pct": 54.2
+      },
+      {
+        "state": "QLD",
+        "industry": "Health and education",
+        "adoption_pct": 52.5
+      },
+      {
+        "state": "QLD",
+        "industry": "Hospitality",
+        "adoption_pct": 52.5
+      },
+      {
+        "state": "QLD",
+        "industry": "Manufacturing",
+        "adoption_pct": 50.8
+      },
+      {
+        "state": "WA",
+        "industry": "Services",
+        "adoption_pct": 78.7
+      },
+      {
+        "state": "WA",
+        "industry": "Retail trade",
+        "adoption_pct": 73.8
+      },
+      {
+        "state": "WA",
+        "industry": "Distribution",
+        "adoption_pct": 57.4
+      },
+      {
+        "state": "WA",
+        "industry": "Construction",
+        "adoption_pct": 55.7
+      },
+      {
+        "state": "WA",
+        "industry": "Agriculture",
+        "adoption_pct": 52.4
+      },
+      {
+        "state": "WA",
+        "industry": "Health and education",
+        "adoption_pct": 50.8
+      },
+      {
+        "state": "WA",
+        "industry": "Hospitality",
+        "adoption_pct": 50.8
+      },
+      {
+        "state": "WA",
+        "industry": "Manufacturing",
+        "adoption_pct": 49.2
+      },
+      {
+        "state": "SA",
+        "industry": "Services",
+        "adoption_pct": 73.3
+      },
+      {
+        "state": "SA",
+        "industry": "Retail trade",
+        "adoption_pct": 68.8
+      },
+      {
+        "state": "SA",
+        "industry": "Distribution",
+        "adoption_pct": 53.5
+      },
+      {
+        "state": "SA",
+        "industry": "Construction",
+        "adoption_pct": 51.9
+      },
+      {
+        "state": "SA",
+        "industry": "Agriculture",
+        "adoption_pct": 48.9
+      },
+      {
+        "state": "SA",
+        "industry": "Health and education",
+        "adoption_pct": 47.4
+      },
+      {
+        "state": "SA",
+        "industry": "Hospitality",
+        "adoption_pct": 47.4
+      },
+      {
+        "state": "SA",
+        "industry": "Manufacturing",
+        "adoption_pct": 45.8
+      },
+      {
+        "state": "TAS",
+        "industry": "Services",
+        "adoption_pct": 64.0
+      },
+      {
+        "state": "TAS",
+        "industry": "Retail trade",
+        "adoption_pct": 60.0
+      },
+      {
+        "state": "TAS",
+        "industry": "Distribution",
+        "adoption_pct": 46.7
+      },
+      {
+        "state": "TAS",
+        "industry": "Construction",
+        "adoption_pct": 45.3
+      },
+      {
+        "state": "TAS",
+        "industry": "Agriculture",
+        "adoption_pct": 42.7
+      },
+      {
+        "state": "TAS",
+        "industry": "Health and education",
+        "adoption_pct": 41.3
+      },
+      {
+        "state": "TAS",
+        "industry": "Hospitality",
+        "adoption_pct": 41.3
+      },
+      {
+        "state": "TAS",
+        "industry": "Manufacturing",
+        "adoption_pct": 40.0
+      },
+      {
+        "state": "NT",
+        "industry": "Services",
+        "adoption_pct": 61.3
+      },
+      {
+        "state": "NT",
+        "industry": "Retail trade",
+        "adoption_pct": 57.5
+      },
+      {
+        "state": "NT",
+        "industry": "Distribution",
+        "adoption_pct": 44.7
+      },
+      {
+        "state": "NT",
+        "industry": "Construction",
+        "adoption_pct": 43.4
+      },
+      {
+        "state": "NT",
+        "industry": "Agriculture",
+        "adoption_pct": 40.9
+      },
+      {
+        "state": "NT",
+        "industry": "Health and education",
+        "adoption_pct": 39.6
+      },
+      {
+        "state": "NT",
+        "industry": "Hospitality",
+        "adoption_pct": 39.6
+      },
+      {
+        "state": "NT",
+        "industry": "Manufacturing",
+        "adoption_pct": 38.3
+      }
+    ]
+  },
   "layer": [
     {
       "params": [
-        { "name": "cell_hover", "select": { "type": "point", "on": "pointerover", "clear": "pointerout" } }
+        {
+          "name": "cell_hover",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
       ],
-      "mark": { "type": "rect" },
+      "mark": {
+        "type": "rect"
+      },
       "encoding": {
         "x": {
           "field": "state",
           "type": "nominal",
           "title": null,
-          "sort": ["ACT", "VIC", "NSW", "QLD", "WA", "SA", "TAS", "NT"]
+          "sort": [
+            "ACT",
+            "VIC",
+            "NSW",
+            "QLD",
+            "WA",
+            "SA",
+            "TAS",
+            "NT"
+          ]
         },
         "y": {
           "field": "industry",
           "type": "nominal",
           "title": null,
-          "sort": ["Services", "Retail trade", "Distribution", "Construction", "Agriculture", "Health and education", "Hospitality", "Manufacturing"],
-          "axis": { "labelLimit": 160 }
+          "sort": [
+            "Services",
+            "Retail trade",
+            "Distribution",
+            "Construction",
+            "Agriculture",
+            "Health and education",
+            "Hospitality",
+            "Manufacturing"
+          ],
+          "axis": {
+            "labelLimit": 160
+          }
         },
         "color": {
           "field": "adoption_pct",
           "type": "quantitative",
           "title": "Est. adoption (%)",
           "scale": {
-            "domain": [30, 100],
-            "range": ["#f7f0ee", "#de1e1c"]
+            "domain": [
+              30,
+              100
+            ],
+            "range": [
+              "#f7f0ee",
+              "#de1e1c"
+            ]
           },
           "legend": {
             "orient": "right",
@@ -63,40 +423,89 @@
           }
         },
         "opacity": {
-          "condition": { "param": "cell_hover", "empty": true, "value": 1 },
+          "condition": {
+            "param": "cell_hover",
+            "empty": true,
+            "value": 1
+          },
           "value": 0.5
         },
         "stroke": {
-          "condition": { "param": "cell_hover", "empty": false, "value": "#1a1814" },
+          "condition": {
+            "param": "cell_hover",
+            "empty": false,
+            "value": "#1a1814"
+          },
           "value": "transparent"
         },
         "strokeWidth": {
-          "condition": { "param": "cell_hover", "empty": false, "value": 2 },
+          "condition": {
+            "param": "cell_hover",
+            "empty": false,
+            "value": 2
+          },
           "value": 0
         },
         "tooltip": [
-          { "field": "state",        "title": "State" },
-          { "field": "industry",     "title": "Industry" },
-          { "field": "adoption_pct", "title": "Est. AI adoption (%)", "format": ".0f" }
+          {
+            "field": "state",
+            "title": "State"
+          },
+          {
+            "field": "industry",
+            "title": "Industry"
+          },
+          {
+            "field": "adoption_pct",
+            "title": "Est. AI adoption (%)",
+            "format": ".0f"
+          }
         ]
       }
     },
     {
-      "mark": { "type": "text", "fontSize": 8.5 },
+      "mark": {
+        "type": "text",
+        "fontSize": 8.5
+      },
       "encoding": {
         "x": {
           "field": "state",
           "type": "nominal",
-          "sort": ["ACT", "VIC", "NSW", "QLD", "WA", "SA", "TAS", "NT"]
+          "sort": [
+            "ACT",
+            "VIC",
+            "NSW",
+            "QLD",
+            "WA",
+            "SA",
+            "TAS",
+            "NT"
+          ]
         },
         "y": {
           "field": "industry",
           "type": "nominal",
-          "sort": ["Services", "Retail trade", "Distribution", "Construction", "Agriculture", "Health and education", "Hospitality", "Manufacturing"]
+          "sort": [
+            "Services",
+            "Retail trade",
+            "Distribution",
+            "Construction",
+            "Agriculture",
+            "Health and education",
+            "Hospitality",
+            "Manufacturing"
+          ]
         },
-        "text": { "field": "adoption_pct", "format": ".0f" },
+        "text": {
+          "field": "adoption_pct",
+          "format": ".0f"
+        },
         "color": {
-          "condition": { "test": "datum.adoption_pct > 70", "value": "white" },
+          "condition": {
+            "test": "datum.adoption_pct > 70",
+            "value": "white"
+          },
           "value": "#4a4640"
         }
       }
@@ -111,11 +520,46 @@
         "dy": -30,
         "color": "#de1e1c"
       },
-      "data": { "values": [{ "state": "ACT", "industry": "Services" }] },
+      "data": {
+        "values": [
+          {
+            "state": "ACT",
+            "industry": "Services"
+          }
+        ]
+      },
       "encoding": {
-        "x": { "field": "state", "type": "nominal", "sort": ["ACT", "VIC", "NSW", "QLD", "WA", "SA", "TAS", "NT"] },
-        "y": { "field": "industry", "type": "nominal", "sort": ["Services", "Retail trade", "Distribution", "Construction", "Agriculture", "Health and education", "Hospitality", "Manufacturing"] },
-        "text": { "value": "hottest" }
+        "x": {
+          "field": "state",
+          "type": "nominal",
+          "sort": [
+            "ACT",
+            "VIC",
+            "NSW",
+            "QLD",
+            "WA",
+            "SA",
+            "TAS",
+            "NT"
+          ]
+        },
+        "y": {
+          "field": "industry",
+          "type": "nominal",
+          "sort": [
+            "Services",
+            "Retail trade",
+            "Distribution",
+            "Construction",
+            "Agriculture",
+            "Health and education",
+            "Hospitality",
+            "Manufacturing"
+          ]
+        },
+        "text": {
+          "value": "hottest"
+        }
       }
     },
     {
@@ -125,15 +569,50 @@
         "fontWeight": "bold",
         "fontStyle": "italic",
         "font": "Georgia, 'Times New Roman', serif",
-        "dx" : 70,
+        "dx": 70,
         "dy": 0,
         "color": "#9a9690"
       },
-      "data": { "values": [{ "state": "NT", "industry": "Manufacturing" }] },
+      "data": {
+        "values": [
+          {
+            "state": "NT",
+            "industry": "Manufacturing"
+          }
+        ]
+      },
       "encoding": {
-        "x": { "field": "state", "type": "nominal", "sort": ["ACT", "VIC", "NSW", "QLD", "WA", "SA", "TAS", "NT"] },
-        "y": { "field": "industry", "type": "nominal", "sort": ["Services", "Retail trade", "Distribution", "Construction", "Agriculture", "Health and education", "Hospitality", "Manufacturing"] },
-        "text": { "value": "coldest" }
+        "x": {
+          "field": "state",
+          "type": "nominal",
+          "sort": [
+            "ACT",
+            "VIC",
+            "NSW",
+            "QLD",
+            "WA",
+            "SA",
+            "TAS",
+            "NT"
+          ]
+        },
+        "y": {
+          "field": "industry",
+          "type": "nominal",
+          "sort": [
+            "Services",
+            "Retail trade",
+            "Distribution",
+            "Construction",
+            "Agriculture",
+            "Health and education",
+            "Hospitality",
+            "Manufacturing"
+          ]
+        },
+        "text": {
+          "value": "coldest"
+        }
       }
     }
   ]

@@ -3,11 +3,17 @@
   "width": "container",
   "height": 220,
   "background": "transparent",
-  "padding": { "left": 20, "right": 80, "top": 10, "bottom": 10 },
-
+  "padding": {
+    "left": 20,
+    "right": 80,
+    "top": 10,
+    "bottom": 10
+  },
   "config": {
     "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
-    "view": { "stroke": null },
+    "view": {
+      "stroke": null
+    },
     "axis": {
       "labelColor": "#4a4640",
       "labelFontSize": 11,
@@ -17,131 +23,332 @@
       "gridOpacity": 0.5
     }
   },
-
-  "data": { "url": "../data/metro_regional_adoption.csv" },
-
+  "data": {
+    "values": [
+      {
+        "state": "Victoria",
+        "metro": 0.38,
+        "regional": 0.16,
+        "source": "Derived (NAIC ratio)"
+      },
+      {
+        "state": "New South Wales",
+        "metro": 0.34,
+        "regional": 0.18,
+        "source": "NAIC Q4 2024"
+      },
+      {
+        "state": "Queensland",
+        "metro": 0.32,
+        "regional": 0.14,
+        "source": "Derived (NAIC ratio)"
+      },
+      {
+        "state": "Western Australia",
+        "metro": 0.32,
+        "regional": 0.11,
+        "source": "NAIC Q4 2024"
+      },
+      {
+        "state": "South Australia",
+        "metro": 0.29,
+        "regional": 0.12,
+        "source": "Derived (NAIC ratio)"
+      },
+      {
+        "state": "Tasmania",
+        "metro": 0.25,
+        "regional": 0.11,
+        "source": "Derived (NAIC ratio)"
+      },
+      {
+        "state": "Australian Capital Territory",
+        "metro": 0.39,
+        "regional": 0.17,
+        "source": "Derived (NAIC ratio)"
+      },
+      {
+        "state": "Northern Territory",
+        "metro": 0.24,
+        "regional": 0.1,
+        "source": "Derived (NAIC ratio)"
+      }
+    ]
+  },
   "transform": [
-    { "calculate": "datum.metro - datum.regional", "as": "gap" },
-    { "calculate": "(datum.metro + datum.regional) / 2", "as": "mid" },
-    { "calculate": "format(datum.gap * 100, '.0f') + '%'", "as": "gap_label" },
-    { "joinaggregate": [{ "op": "max", "field": "gap", "as": "max_gap" }] },
-    { "calculate": "datum.gap === datum.max_gap", "as": "is_max" }
+    {
+      "calculate": "datum.metro - datum.regional",
+      "as": "gap"
+    },
+    {
+      "calculate": "(datum.metro + datum.regional) / 2",
+      "as": "mid"
+    },
+    {
+      "calculate": "format(datum.gap * 100, '.0f') + '%'",
+      "as": "gap_label"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "gap",
+          "as": "max_gap"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.gap === datum.max_gap",
+      "as": "is_max"
+    }
   ],
-
   "encoding": {
     "y": {
       "field": "state",
       "type": "nominal",
-      "sort": { "field": "gap", "order": "descending" },
-      "axis": { "title": null, "ticks": false, "domain": false, "labelLimit": 200, "labelPadding": 8 }
+      "sort": {
+        "field": "gap",
+        "order": "descending"
+      },
+      "axis": {
+        "title": null,
+        "ticks": false,
+        "domain": false,
+        "labelLimit": 200,
+        "labelPadding": 8
+      }
     }
   },
-
   "layer": [
     {
-      "mark": { "type": "rule", "strokeWidth": 2 },
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 2
+      },
       "encoding": {
         "x": {
-          "field": "regional", "type": "quantitative",
-          "axis": { "title": "AI Adoption Rate", "format": ".0%" }
+          "field": "regional",
+          "type": "quantitative",
+          "axis": {
+            "title": "AI Adoption Rate",
+            "format": ".0%"
+          }
         },
-        "x2": { "field": "metro" },
+        "x2": {
+          "field": "metro"
+        },
         "color": {
-          "condition": { "test": "datum.is_max", "value": "#de1e1c" },
+          "condition": {
+            "test": "datum.is_max",
+            "value": "#de1e1c"
+          },
           "value": "#e0dbd4"
         },
         "opacity": {
-          "condition": { "param": "select", "empty": true, "value": 1 },
+          "condition": {
+            "param": "select",
+            "empty": true,
+            "value": 1
+          },
           "value": 0.25
         }
       }
     },
     {
       "params": [
-        { "name": "highlight", "select": { "type": "point", "on": "pointerover" } },
-        { "name": "select",    "select": "point" }
+        {
+          "name": "highlight",
+          "select": {
+            "type": "point",
+            "on": "pointerover"
+          }
+        },
+        {
+          "name": "select",
+          "select": "point"
+        }
       ],
-      "mark": { "type": "point", "filled": true, "size": 80 },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 80
+      },
       "encoding": {
-        "x": { "field": "regional", "type": "quantitative" },
-        "color": { "value": "#9a9690" },
-        "fillOpacity": {
-          "condition": { "param": "select", "empty": true, "value": 1 },
-          "value": 0.25
+        "x": {
+          "field": "regional",
+          "type": "quantitative"
         },
-        "strokeWidth": {
-          "condition": [
-            { "param": "select",    "empty": false, "value": 2 },
-            { "param": "highlight", "empty": false, "value": 1 }
-          ],
-          "value": 0
-        },
-        "stroke": { "value": "#9a9690" }
-      }
-    },
-    {
-      "mark": { "type": "point", "filled": true, "size": 80 },
-      "encoding": {
-        "x": { "field": "metro", "type": "quantitative" },
         "color": {
-          "condition": { "test": "datum.is_max", "value": "#de1e1c" },
-          "value": "#1a1814"
+          "value": "#9a9690"
         },
         "fillOpacity": {
-          "condition": { "param": "select", "empty": true, "value": 1 },
+          "condition": {
+            "param": "select",
+            "empty": true,
+            "value": 1
+          },
           "value": 0.25
         },
         "strokeWidth": {
           "condition": [
-            { "param": "select",    "empty": false, "value": 2 },
-            { "param": "highlight", "empty": false, "value": 1 }
+            {
+              "param": "select",
+              "empty": false,
+              "value": 2
+            },
+            {
+              "param": "highlight",
+              "empty": false,
+              "value": 1
+            }
           ],
           "value": 0
         },
         "stroke": {
-          "condition": { "test": "datum.is_max", "value": "#de1e1c" },
+          "value": "#9a9690"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 80
+      },
+      "encoding": {
+        "x": {
+          "field": "metro",
+          "type": "quantitative"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.is_max",
+            "value": "#de1e1c"
+          },
+          "value": "#1a1814"
+        },
+        "fillOpacity": {
+          "condition": {
+            "param": "select",
+            "empty": true,
+            "value": 1
+          },
+          "value": 0.25
+        },
+        "strokeWidth": {
+          "condition": [
+            {
+              "param": "select",
+              "empty": false,
+              "value": 2
+            },
+            {
+              "param": "highlight",
+              "empty": false,
+              "value": 1
+            }
+          ],
+          "value": 0
+        },
+        "stroke": {
+          "condition": {
+            "test": "datum.is_max",
+            "value": "#de1e1c"
+          },
           "value": "#1a1814"
         }
       }
     },
     {
-      "mark": { "type": "text", "fontSize": 9, "fontWeight": "bold", "dy": -10 },
+      "mark": {
+        "type": "text",
+        "fontSize": 9,
+        "fontWeight": "bold",
+        "dy": -10
+      },
       "encoding": {
-        "x": { "field": "mid", "type": "quantitative" },
-        "text": { "field": "gap_label" },
+        "x": {
+          "field": "mid",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "gap_label"
+        },
         "color": {
-          "condition": { "test": "datum.is_max", "value": "#de1e1c" },
+          "condition": {
+            "test": "datum.is_max",
+            "value": "#de1e1c"
+          },
           "value": "#9a9690"
         },
         "opacity": {
-          "condition": { "param": "select", "empty": true, "value": 1 },
+          "condition": {
+            "param": "select",
+            "empty": true,
+            "value": 1
+          },
           "value": 0.25
         }
       }
     },
     {
-      "mark": { "type": "text", "align": "right", "dx": -10, "fontSize": 9 },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "fontSize": 9
+      },
       "encoding": {
-        "x": { "field": "regional", "type": "quantitative" },
-        "text": { "field": "regional", "format": ".0%" },
-        "color": { "value": "#9a9690" },
-        "opacity": {
-          "condition": { "param": "select", "empty": true, "value": 1 },
-          "value": 0.25
-        }
-      }
-    },
-    {
-      "mark": { "type": "text", "align": "left", "dx": 10, "fontSize": 9 },
-      "encoding": {
-        "x": { "field": "metro", "type": "quantitative" },
-        "text": { "field": "metro", "format": ".0%" },
+        "x": {
+          "field": "regional",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "regional",
+          "format": ".0%"
+        },
         "color": {
-          "condition": { "test": "datum.is_max", "value": "#de1e1c" },
+          "value": "#9a9690"
+        },
+        "opacity": {
+          "condition": {
+            "param": "select",
+            "empty": true,
+            "value": 1
+          },
+          "value": 0.25
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 9
+      },
+      "encoding": {
+        "x": {
+          "field": "metro",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "metro",
+          "format": ".0%"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.is_max",
+            "value": "#de1e1c"
+          },
           "value": "#1a1814"
         },
         "opacity": {
-          "condition": { "param": "select", "empty": true, "value": 1 },
+          "condition": {
+            "param": "select",
+            "empty": true,
+            "value": 1
+          },
           "value": 0.25
         }
       }

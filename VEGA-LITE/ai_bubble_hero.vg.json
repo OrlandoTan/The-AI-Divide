@@ -2,46 +2,147 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "width": 650,
   "height": 1100,
-  "padding" : {"top": 0,"left": 0},
-  "autosize": {"type": "fit", "contains": "padding"},
+  "padding": {
+    "top": 0,
+    "left": 0
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
   "signals": [
-    {"name": "cx", "update": "width / 2"},
-    {"name": "cy", "update": "height / 2"},
-    {"name": "gravityX", "value": 0.7},
-    {"name": "gravityY", "value": 0.4}
+    {
+      "name": "cx",
+      "update": "width / 2"
+    },
+    {
+      "name": "cy",
+      "update": "height / 2"
+    },
+    {
+      "name": "gravityX",
+      "value": 0.7
+    },
+    {
+      "name": "gravityY",
+      "value": 0.4
+    }
   ],
   "data": [
     {
       "name": "table",
-      "url": "../data/ai_companies_by_state.csv",
-      "format": {
-        "type": "csv",
-        "parse": {"ai_companies": "number", "ai_adoption": "number"}
-      },
-      "transform": [{"type": "filter", "expr": "datum.ai_companies > 0"}]
+      "values": [
+        {
+          "state": "Australian Capital Territory",
+          "state_code": "ACT",
+          "ai_adoption": 0.75,
+          "ai_companies": 19,
+          "adoption_norm": 1.0,
+          "companies_norm": 0.062
+        },
+        {
+          "state": "Victoria",
+          "state_code": "VIC",
+          "ai_adoption": 0.72,
+          "ai_companies": 254,
+          "adoption_norm": 0.897,
+          "companies_norm": 0.833
+        },
+        {
+          "state": "New South Wales",
+          "state_code": "NSW",
+          "ai_adoption": 0.68,
+          "ai_companies": 305,
+          "adoption_norm": 0.759,
+          "companies_norm": 1.0
+        },
+        {
+          "state": "Queensland",
+          "state_code": "QLD",
+          "ai_adoption": 0.61,
+          "ai_companies": 144,
+          "adoption_norm": 0.517,
+          "companies_norm": 0.472
+        },
+        {
+          "state": "Western Australia",
+          "state_code": "WA",
+          "ai_adoption": 0.59,
+          "ai_companies": 85,
+          "adoption_norm": 0.448,
+          "companies_norm": 0.279
+        },
+        {
+          "state": "South Australia",
+          "state_code": "SA",
+          "ai_adoption": 0.55,
+          "ai_companies": 51,
+          "adoption_norm": 0.31,
+          "companies_norm": 0.167
+        },
+        {
+          "state": "Tasmania",
+          "state_code": "TAS",
+          "ai_adoption": 0.48,
+          "ai_companies": 0,
+          "adoption_norm": 0.069,
+          "companies_norm": 0.0
+        },
+        {
+          "state": "Northern Territory",
+          "state_code": "NT",
+          "ai_adoption": 0.46,
+          "ai_companies": 0,
+          "adoption_norm": 0.0,
+          "companies_norm": 0.0
+        }
+      ],
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.ai_companies > 0"
+        }
+      ]
     }
   ],
   "scales": [
     {
       "name": "size",
       "type": "linear",
-      "domain": {"data": "table", "field": "ai_companies"},
-      "range": [550, 115000]
+      "domain": {
+        "data": "table",
+        "field": "ai_companies"
+      },
+      "range": [
+        550,
+        115000
+      ]
     }
   ],
   "marks": [
     {
       "name": "nodes",
       "type": "symbol",
-      "from": {"data": "table"},
+      "from": {
+        "data": "table"
+      },
       "encode": {
         "enter": {
-          "fill": {"value": "#de1e1c"},
-          "xfocus": {"signal": "cx"},
-          "yfocus": {"signal": "cy"}
+          "fill": {
+            "value": "#de1e1c"
+          },
+          "xfocus": {
+            "signal": "cx"
+          },
+          "yfocus": {
+            "signal": "cy"
+          }
         },
         "update": {
-          "size": {"field": "ai_companies", "scale": "size"},
+          "size": {
+            "field": "ai_companies",
+            "scale": "size"
+          },
           "tooltip": {
             "signal": "{'State': datum.state, 'AI companies': datum.ai_companies, 'AI adoption': format(datum.ai_adoption, '.0%')}"
           }
@@ -56,49 +157,112 @@
             {
               "force": "collide",
               "iterations": 2,
-              "radius": {"expr": "sqrt(datum.size / PI) + 5"}
+              "radius": {
+                "expr": "sqrt(datum.size / PI) + 5"
+              }
             },
-            {"force": "center", "x": {"signal": "cx"}, "y": {"signal": "cy"}},
-            {"force": "x", "x": "xfocus", "strength": {"signal": "gravityX"}},
-            {"force": "y", "y": "yfocus", "strength": {"signal": "gravityY"}}
+            {
+              "force": "center",
+              "x": {
+                "signal": "cx"
+              },
+              "y": {
+                "signal": "cy"
+              }
+            },
+            {
+              "force": "x",
+              "x": "xfocus",
+              "strength": {
+                "signal": "gravityX"
+              }
+            },
+            {
+              "force": "y",
+              "y": "yfocus",
+              "strength": {
+                "signal": "gravityY"
+              }
+            }
           ]
         }
       ]
     },
     {
       "type": "text",
-      "from": {"data": "nodes"},
+      "from": {
+        "data": "nodes"
+      },
       "encode": {
         "enter": {
-          "align": {"value": "center"},
-          "baseline": {"value": "bottom"},
-          "font": {"value": "Helvetica Neue, Helvetica, Arial, sans-serif"},
-          "fontSize": {"signal": "max(11, sqrt(datum.size) / 8)"},
-          "fontWeight": {"value": 900},
-          "fill": {"value": "#FFFFFF"},
-          "text": {"field": "datum.state_code"}
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "bottom"
+          },
+          "font": {
+            "value": "Helvetica Neue, Helvetica, Arial, sans-serif"
+          },
+          "fontSize": {
+            "signal": "max(11, sqrt(datum.size) / 8)"
+          },
+          "fontWeight": {
+            "value": 900
+          },
+          "fill": {
+            "value": "#FFFFFF"
+          },
+          "text": {
+            "field": "datum.state_code"
+          }
         },
         "update": {
-          "x": {"field": "x"}, 
-          "y": {"signal": "datum.y"}}
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "signal": "datum.y"
+          }
+        }
       }
     },
     {
       "type": "text",
-      "from": {"data": "nodes"},
+      "from": {
+        "data": "nodes"
+      },
       "encode": {
         "enter": {
-          "align": {"value": "center"},
-          "baseline": {"value": "top"},
-          "font": {"value": "Helvetica Neue, Helvetica, Arial, sans-serif"},
-          "fontWeight" : {"value": 500},
-          "fontSize": {"signal": "max(11, sqrt(datum.size) / 12)"},
-          "fill": {"value": "#FBE7DD"},
-          "text": {"field": "datum.ai_companies"}
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "font": {
+            "value": "Helvetica Neue, Helvetica, Arial, sans-serif"
+          },
+          "fontWeight": {
+            "value": 500
+          },
+          "fontSize": {
+            "signal": "max(11, sqrt(datum.size) / 12)"
+          },
+          "fill": {
+            "value": "#FBE7DD"
+          },
+          "text": {
+            "field": "datum.ai_companies"
+          }
         },
         "update": {
-          "x": {"field": "x"},
-          "y": {"signal": "datum.y + 3"}
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "signal": "datum.y + 3"
+          }
         }
       }
     }

@@ -5,7 +5,9 @@
   "background": "transparent",
   "config": {
     "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
-    "view": { "stroke": null },
+    "view": {
+      "stroke": null
+    },
     "axis": {
       "labelColor": "#4a4640",
       "labelFontSize": 10,
@@ -20,50 +22,208 @@
       "gridWidth": 1
     }
   },
-  "data": { "url": "../data/demand.csv" },
+  "data": {
+    "values": [
+      {
+        "year": "2015",
+        "pct": 0.2,
+        "note": "Exact \u2014 stated in report"
+      },
+      {
+        "year": "2016",
+        "pct": 0.3,
+        "note": "Estimated from Figure 16b"
+      },
+      {
+        "year": "2017",
+        "pct": 0.3,
+        "note": "Estimated from Figure 16b"
+      },
+      {
+        "year": "2018",
+        "pct": 0.4,
+        "note": "Estimated from Figure 16b"
+      },
+      {
+        "year": "2019",
+        "pct": 0.6,
+        "note": "Estimated from Figure 16b"
+      },
+      {
+        "year": "2020",
+        "pct": 0.6,
+        "note": "Estimated from Figure 16b"
+      },
+      {
+        "year": "2021",
+        "pct": 1.0,
+        "note": "Exact \u2014 stated in report"
+      },
+      {
+        "year": "2022",
+        "pct": 0.9,
+        "note": "Estimated from Figure 16b"
+      },
+      {
+        "year": "2023",
+        "pct": 0.8,
+        "note": "Estimated from Figure 16b"
+      },
+      {
+        "year": "2024",
+        "pct": 0.9,
+        "note": "Exact \u2014 stated in report"
+      }
+    ]
+  },
   "layer": [
     {
-      "mark": { "type": "area", "opacity": 0.3, "color": "#de1e1c", "line": false, "interpolate": "monotone" }
-      ,
+      "mark": {
+        "type": "area",
+        "opacity": 0.3,
+        "color": "#de1e1c",
+        "line": false,
+        "interpolate": "monotone"
+      },
       "encoding": {
-        "x": { "field": "year", "type": "ordinal", "axis": { "title": null, "labelAngle": 0 } },
-        "y": { "field": "pct", "type": "quantitative", "scale": { "domain": [0, 1.2] }, "axis": { "title": "Share of all job postings (%)", "labelExpr": "datum.value + '%'" } }
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "axis": {
+            "title": null,
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1.2
+            ]
+          },
+          "axis": {
+            "title": "Share of all job postings (%)",
+            "labelExpr": "datum.value + '%'"
+          }
+        }
       }
     },
     {
-      "mark": { "type": "line", "strokeWidth": 3, "color": "#de1e1c", "interpolate": "monotone" },
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3,
+        "color": "#de1e1c",
+        "interpolate": "monotone"
+      },
       "encoding": {
-        "x": { "field": "year", "type": "ordinal" },
-        "y": { "field": "pct", "type": "quantitative", "scale": { "domain": [0, 1.2] } }
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1.2
+            ]
+          }
+        }
       }
     },
     {
       "params": [
-        { "name": "hover_point", "select": { "type": "point", "on": "pointerover", "nearest": true, "clear": "pointerout" } }
+        {
+          "name": "hover_point",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "nearest": true,
+            "clear": "pointerout"
+          }
+        }
       ],
-      "mark": { "type": "point", "filled": true, "size": 55, "color": "#de1e1c" },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 55,
+        "color": "#de1e1c"
+      },
       "encoding": {
-        "x": { "field": "year", "type": "ordinal" },
-        "y": { "field": "pct", "type": "quantitative", "scale": { "domain": [0, 1.2] } },
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1.2
+            ]
+          }
+        },
         "size": {
-          "condition": { "param": "hover_point", "empty": false, "value": 180 },
+          "condition": {
+            "param": "hover_point",
+            "empty": false,
+            "value": 180
+          },
           "value": 55
         },
         "opacity": {
-          "condition": { "param": "hover_point", "empty": false, "value": 1 },
+          "condition": {
+            "param": "hover_point",
+            "empty": false,
+            "value": 1
+          },
           "value": 0.85
         },
         "tooltip": [
-          { "field": "year", "title": "Year" },
-          { "field": "pct", "title": "AI job postings %", "format": ".1f" },
-          { "field": "note", "title": "Source note" }
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "pct",
+            "title": "AI job postings %",
+            "format": ".1f"
+          },
+          {
+            "field": "note",
+            "title": "Source note"
+          }
         ]
       }
     },
     {
-      "mark": { "type": "rule", "color": "#1a1814", "strokeWidth": 1.5, "strokeDash": [4, 3], "opacity":0.2},
-      "data": { "values": [{ "year": "2021" }] },
-      "encoding": { "x": { "field": "year", "type": "ordinal" } }
+      "mark": {
+        "type": "rule",
+        "color": "#1a1814",
+        "strokeWidth": 1.5,
+        "strokeDash": [
+          4,
+          3
+        ],
+        "opacity": 0.2
+      },
+      "data": {
+        "values": [
+          {
+            "year": "2021"
+          }
+        ]
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        }
+      }
     },
     {
       "mark": {
@@ -78,10 +238,22 @@
         "color": "#1a1814",
         "lineBreak": "\n"
       },
-      "data": { "values": [{ "year": "2021", "label": "2021 peak\n" }] },
+      "data": {
+        "values": [
+          {
+            "year": "2021",
+            "label": "2021 peak\n"
+          }
+        ]
+      },
       "encoding": {
-        "x": { "field": "year", "type": "ordinal" },
-        "text": { "field": "label" }
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        },
+        "text": {
+          "field": "label"
+        }
       }
     },
     {
@@ -97,10 +269,22 @@
         "color": "#1a1814",
         "lineBreak": "\n"
       },
-      "data": { "values": [{ "year": "2021", "label": "\n1% of all postings now require AI" }] },
+      "data": {
+        "values": [
+          {
+            "year": "2021",
+            "label": "\n1% of all postings now require AI"
+          }
+        ]
+      },
       "encoding": {
-        "x": { "field": "year", "type": "ordinal" },
-        "text": { "field": "label" }
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        },
+        "text": {
+          "field": "label"
+        }
       }
     },
     {
@@ -115,11 +299,32 @@
         "dy": -10,
         "color": "#de1e1c"
       },
-      "data": { "values": [{ "year": "2024", "pct": 0.9 }] },
+      "data": {
+        "values": [
+          {
+            "year": "2024",
+            "pct": 0.9
+          }
+        ]
+      },
       "encoding": {
-        "x": { "field": "year", "type": "ordinal" },
-        "y": { "field": "pct", "type": "quantitative", "scale": { "domain": [0, 1.2] } },
-        "text": { "value": "4× the 2015 level" }
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1.2
+            ]
+          }
+        },
+        "text": {
+          "value": "4\u00d7 the 2015 level"
+        }
       }
     }
   ]

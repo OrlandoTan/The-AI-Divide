@@ -2,14 +2,63 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "width": 700,
   "height": 380,
-  "autosize": {"type": "fit"},
+  "autosize": {
+    "type": "fit"
+  },
   "background": "transparent",
-
   "data": [
     {
       "name": "table",
-      "url": "../data/adoption_by_industry.csv",
-      "format": {"type": "csv", "parse": {"adopting": "number", "not_adopting": "number", "not_aware": "number"}},
+      "values": [
+        {
+          "industry": "Services",
+          "adopting": 48,
+          "not_adopting": 37,
+          "not_aware": 15
+        },
+        {
+          "industry": "Retail trade",
+          "adopting": 45,
+          "not_adopting": 36,
+          "not_aware": 19
+        },
+        {
+          "industry": "Distribution",
+          "adopting": 35,
+          "not_adopting": 32,
+          "not_aware": 33
+        },
+        {
+          "industry": "Construction",
+          "adopting": 34,
+          "not_adopting": 41,
+          "not_aware": 25
+        },
+        {
+          "industry": "Agriculture",
+          "adopting": 32,
+          "not_adopting": 37,
+          "not_aware": 30
+        },
+        {
+          "industry": "Health and education",
+          "adopting": 31,
+          "not_adopting": 41,
+          "not_aware": 28
+        },
+        {
+          "industry": "Hospitality",
+          "adopting": 31,
+          "not_adopting": 42,
+          "not_aware": 27
+        },
+        {
+          "industry": "Manufacturing",
+          "adopting": 30,
+          "not_adopting": 51,
+          "not_aware": 19
+        }
+      ],
       "transform": [
         {
           "type": "formula",
@@ -47,28 +96,38 @@
       "name": "sorted",
       "source": "table",
       "transform": [
-        {"type": "collect", "sort": {"field": "adopting", "order": "descending"}}
+        {
+          "type": "collect",
+          "sort": {
+            "field": "adopting",
+            "order": "descending"
+          }
+        }
       ]
     }
   ],
-
   "scales": [
     {
       "name": "y",
       "type": "band",
-      "domain": {"data": "sorted", "field": "industry"},
+      "domain": {
+        "data": "sorted",
+        "field": "industry"
+      },
       "range": "height",
       "padding": 0.3
     },
     {
       "name": "x",
       "type": "linear",
-      "domain": [-70, 70],
+      "domain": [
+        -70,
+        70
+      ],
       "range": "width",
       "nice": true
     }
   ],
-
   "axes": [
     {
       "orient": "bottom",
@@ -84,68 +143,141 @@
       "encode": {
         "labels": {
           "update": {
-            "text": {"signal": "abs(datum.value) + '%'"}
+            "text": {
+              "signal": "abs(datum.value) + '%'"
+            }
           }
         }
       }
     }
   ],
-  
   "marks": [
     {
       "type": "text",
-      "from": {"data": "sorted"},
+      "from": {
+        "data": "sorted"
+      },
       "encode": {
         "enter": {
-          "x": {"value": -8},
-          "y": {"scale": "y", "field": "industry", "band": 0.5},
-          "text": {"field": "industry"},
-          "align": {"value": "right"},
-          "baseline": {"value": "middle"},
-          "fontSize": {"value": 11},
-          "fill": {"value": "#4a4640"}
+          "x": {
+            "value": -8
+          },
+          "y": {
+            "scale": "y",
+            "field": "industry",
+            "band": 0.5
+          },
+          "text": {
+            "field": "industry"
+          },
+          "align": {
+            "value": "right"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fill": {
+            "value": "#4a4640"
+          }
         }
       }
     },
     {
       "type": "rect",
-      "from": {"data": "sorted"},
+      "from": {
+        "data": "sorted"
+      },
       "encode": {
         "enter": {
-          "y": {"scale": "y", "field": "industry"},
-          "height": {"scale": "y", "band": 1},
-          "x": {"scale": "x", "field": "not_aware_start"},
-          "x2": {"scale": "x", "field": "not_aware_end"},
-          "fill": {"value": "#d4cfc9"},
-          "tooltip": {"signal": "{'Industry': datum.industry, 'Not aware': datum.not_aware + '%'}"}
+          "y": {
+            "scale": "y",
+            "field": "industry"
+          },
+          "height": {
+            "scale": "y",
+            "band": 1
+          },
+          "x": {
+            "scale": "x",
+            "field": "not_aware_start"
+          },
+          "x2": {
+            "scale": "x",
+            "field": "not_aware_end"
+          },
+          "fill": {
+            "value": "#d4cfc9"
+          },
+          "tooltip": {
+            "signal": "{'Industry': datum.industry, 'Not aware': datum.not_aware + '%'}"
+          }
         }
       }
     },
     {
       "type": "rect",
-      "from": {"data": "sorted"},
+      "from": {
+        "data": "sorted"
+      },
       "encode": {
         "enter": {
-          "y": {"scale": "y", "field": "industry"},
-          "height": {"scale": "y", "band": 1},
-          "x": {"scale": "x", "field": "not_adopting_start"},
-          "x2": {"scale": "x", "field": "not_adopting_end"},
-          "fill": {"value": "#9a9690"},
-          "tooltip": {"signal": "{'Industry': datum.industry, 'Not adopting': datum.not_adopting + '%'}"}
+          "y": {
+            "scale": "y",
+            "field": "industry"
+          },
+          "height": {
+            "scale": "y",
+            "band": 1
+          },
+          "x": {
+            "scale": "x",
+            "field": "not_adopting_start"
+          },
+          "x2": {
+            "scale": "x",
+            "field": "not_adopting_end"
+          },
+          "fill": {
+            "value": "#9a9690"
+          },
+          "tooltip": {
+            "signal": "{'Industry': datum.industry, 'Not adopting': datum.not_adopting + '%'}"
+          }
         }
       }
     },
     {
       "type": "rect",
-      "from": {"data": "sorted"},
+      "from": {
+        "data": "sorted"
+      },
       "encode": {
         "enter": {
-          "y": {"scale": "y", "field": "industry"},
-          "height": {"scale": "y", "band": 1},
-          "x": {"scale": "x", "field": "adopting_start"},
-          "x2": {"scale": "x", "field": "adopting_end"},
-          "fill": {"value": "#de1e1c"},
-          "tooltip": {"signal": "{'Industry': datum.industry, 'Adopting': datum.adopting + '%'}"}
+          "y": {
+            "scale": "y",
+            "field": "industry"
+          },
+          "height": {
+            "scale": "y",
+            "band": 1
+          },
+          "x": {
+            "scale": "x",
+            "field": "adopting_start"
+          },
+          "x2": {
+            "scale": "x",
+            "field": "adopting_end"
+          },
+          "fill": {
+            "value": "#de1e1c"
+          },
+          "tooltip": {
+            "signal": "{'Industry': datum.industry, 'Adopting': datum.adopting + '%'}"
+          }
         }
       }
     },
@@ -153,12 +285,30 @@
       "type": "rule",
       "encode": {
         "enter": {
-          "x": {"scale": "x", "value": 0},
-          "y": {"value": 0},
-          "y2": {"field": {"group": "height"}},
-          "stroke": {"value": "#1a1814"},
-          "strokeWidth": {"value": 1},
-          "strokeDash": {"value": [4, 3]}
+          "x": {
+            "scale": "x",
+            "value": 0
+          },
+          "y": {
+            "value": 0
+          },
+          "y2": {
+            "field": {
+              "group": "height"
+            }
+          },
+          "stroke": {
+            "value": "#1a1814"
+          },
+          "strokeWidth": {
+            "value": 1
+          },
+          "strokeDash": {
+            "value": [
+              4,
+              3
+            ]
+          }
         }
       }
     }
