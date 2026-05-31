@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega/v5.json",
   "width": 650,
   "height": 1100,
-  "padding" : {"top": 0,"left": -100},
+  "padding" : {"top": 0,"left": 0},
   "autosize": {"type": "fit", "contains": "padding"},
   "signals": [
     {"name": "cx", "update": "width / 2"},
