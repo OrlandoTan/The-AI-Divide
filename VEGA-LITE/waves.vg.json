@@ -38,14 +38,25 @@
       }
     },
     {
+      "params": [
+        { "name": "hover_point", "select": { "type": "point", "on": "pointerover", "nearest": true, "clear": "pointerout" } }
+      ],
       "mark": { "type": "point", "filled": true, "size": 55, "color": "#de1e1c" },
       "encoding": {
         "x": { "field": "year", "type": "ordinal" },
         "y": { "field": "pct", "type": "quantitative", "scale": { "domain": [0, 1.2] } },
+        "size": {
+          "condition": { "param": "hover_point", "empty": false, "value": 180 },
+          "value": 55
+        },
+        "opacity": {
+          "condition": { "param": "hover_point", "empty": false, "value": 1 },
+          "value": 0.85
+        },
         "tooltip": [
           { "field": "year", "title": "Year" },
           { "field": "pct", "title": "AI job postings %", "format": ".1f" },
-          { "field": "note", "title": "Note" }
+          { "field": "note", "title": "Source note" }
         ]
       }
     },
@@ -90,6 +101,25 @@
       "encoding": {
         "x": { "field": "year", "type": "ordinal" },
         "text": { "field": "label" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 8.5,
+        "fontStyle": "italic",
+        "fontWeight": "bold",
+        "font": "Georgia, 'Times New Roman', serif",
+        "align": "left",
+        "dx": 6,
+        "dy": -10,
+        "color": "#de1e1c"
+      },
+      "data": { "values": [{ "year": "2024", "pct": 0.9 }] },
+      "encoding": {
+        "x": { "field": "year", "type": "ordinal" },
+        "y": { "field": "pct", "type": "quantitative", "scale": { "domain": [0, 1.2] } },
+        "text": { "value": "4× the 2015 level" }
       }
     }
   ]
