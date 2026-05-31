@@ -7,7 +7,7 @@
   "signals": [
     {"name": "cx", "update": "width / 2"},
     {"name": "cy", "update": "height / 2"},
-    {"name": "gravityX", "value": 1},
+    {"name": "gravityX", "value": 0.7},
     {"name": "gravityY", "value": 0.4}
   ],
   "data": [
@@ -26,7 +26,7 @@
       "name": "size",
       "type": "linear",
       "domain": {"data": "table", "field": "ai_companies"},
-      "range": [550, 120000]
+      "range": [550, 115000]
     }
   ],
   "marks": [
