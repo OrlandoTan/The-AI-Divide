@@ -1,0 +1,126 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 320,
+  "background": "transparent",
+  "config": {
+    "font": "Helvetica Neue, Helvetica, Arial, sans-serif",
+    "view": { "stroke": null },
+    "axis": {
+      "labelColor": "#4a4640",
+      "labelFontSize": 10,
+      "titleColor": "#4a4640",
+      "titleFontSize": 10,
+      "domainColor": "#e0dbd4",
+      "tickColor": "#4a4640",
+      "tickSize": 4,
+      "gridColor": "#e0dbd4",
+      "gridOpacity": 0.4,
+      "gridWidth": 1
+    }
+  },
+  "data": { "url": "../data/ai_skills_by_occupation.csv" },
+  "encoding": {
+    "y": {
+      "field": "occupation",
+      "type": "nominal",
+      "sort": { "field": "pct", "order": "descending" },
+      "axis": { "title": null, "labelLimit": 240, "ticks": true, "domain": false }
+    }
+  },
+  "layer": [
+    {
+      "mark": { "type": "rule", "strokeWidth": 2.5, "color": "#de1e1c" },
+      "encoding": {
+        "x": {
+          "field": "pct",
+          "type": "quantitative",
+          "scale": { "domain": [0, 9], "padding": 0 },
+          "axis": {
+            "title": "Share of job postings requiring AI skills",
+            "labelExpr": "datum.value + '%'",
+            "tickCount": 5
+          }
+        },
+        "x2": { "datum": 0 }
+      }
+    },
+    {
+      "mark": { "type": "point", "filled": true, "color": "#de1e1c", "opacity": 1 },
+      "encoding": {
+        "x": {
+          "field": "pct",
+          "type": "quantitative",
+          "scale": { "domain": [0, 9], "padding": 10 }
+        },
+        "size": {
+          "field": "workers_thousands",
+          "type": "quantitative",
+          "scale": { "range": [30, 500] },
+          "legend": {
+            "title": "Workforce size (thousands)",
+            "values": [200, 500, 1000],
+            "orient": "bottom",
+            "direction": "horizontal",
+            "titleFontSize": 9,
+            "labelFontSize": 9,
+            "titleColor": "#9a9690",
+            "labelColor": "#4a4640",
+            "symbolStrokeWidth": 0,
+            "symbolFillColor": "#de1e1c"
+          }
+        },
+        "tooltip": [
+          { "field": "occupation",        "title": "Occupation" },
+          { "field": "pct",               "title": "AI skill demand %",   "format": ".1f" },
+          { "field": "workers_thousands", "title": "Workers (thousands)", "format": "," }
+        ]
+      }
+    },
+    {
+      "mark": { "type": "text", "align": "left", "dx": 15, "fontSize": 9, "color": "#de1e1c" },
+      "encoding": {
+        "x": {
+          "field": "pct",
+          "type": "quantitative",
+          "scale": { "domain": [0, 9], "padding": 10 }
+        },
+        "text": { "field": "pct", "format": ".1f" }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#4a4640",
+        "strokeDash": [4, 3],
+        "strokeWidth": 1.5,
+        "opacity": 0.4
+      },
+      "data": { "values": [{ "pct": 0.9 }] },
+      "encoding": {
+        "x": { "field": "pct", "type": "quantitative" },
+        "y": { "value": 0 },
+        "y2": { "signal": "height" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 4,
+        "dy": -8,
+        "fontSize": 9,
+        "fontStyle": "italic",
+        "fontWeight": "bold",
+        "font": "Georgia, 'Times New Roman', serif",
+        "color": "#4a4640"
+      },
+      "data": { "values": [{ "pct": 0.9 }] },
+      "encoding": {
+        "x": { "field": "pct", "type": "quantitative" },
+        "y": { "value": 0 },
+        "text": { "value": "National avg 0.9%" }
+      }
+    }
+  ]
+}
