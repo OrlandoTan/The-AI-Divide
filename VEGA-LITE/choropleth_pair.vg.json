@@ -61,48 +61,7 @@
       "width": 270,
       "height": 215,
       "data": {
-        "values": [
-          {
-            "state": "Australian Capital Territory",
-            "adoption_2024": 0.75,
-            "adoption_2028": 0.825
-          },
-          {
-            "state": "Victoria",
-            "adoption_2024": 0.72,
-            "adoption_2028": 0.792
-          },
-          {
-            "state": "New South Wales",
-            "adoption_2024": 0.68,
-            "adoption_2028": 0.748
-          },
-          {
-            "state": "Queensland",
-            "adoption_2024": 0.61,
-            "adoption_2028": 0.72
-          },
-          {
-            "state": "Western Australia",
-            "adoption_2024": 0.59,
-            "adoption_2028": 0.696
-          },
-          {
-            "state": "South Australia",
-            "adoption_2024": 0.55,
-            "adoption_2028": 0.649
-          },
-          {
-            "state": "Tasmania",
-            "adoption_2024": 0.48,
-            "adoption_2028": 0.538
-          },
-          {
-            "state": "Northern Territory",
-            "adoption_2024": 0.46,
-            "adoption_2028": 0.515
-          }
-        ]
+        "url": "data/state_adoption_projection.csv"
       },
       "transform": [
         {

@@ -24,56 +24,7 @@
     }
   },
   "data": {
-    "values": [
-      {
-        "state": "Victoria",
-        "metro": 0.38,
-        "regional": 0.16,
-        "source": "Derived (NAIC ratio)"
-      },
-      {
-        "state": "New South Wales",
-        "metro": 0.34,
-        "regional": 0.18,
-        "source": "NAIC Q4 2024"
-      },
-      {
-        "state": "Queensland",
-        "metro": 0.32,
-        "regional": 0.14,
-        "source": "Derived (NAIC ratio)"
-      },
-      {
-        "state": "Western Australia",
-        "metro": 0.32,
-        "regional": 0.11,
-        "source": "NAIC Q4 2024"
-      },
-      {
-        "state": "South Australia",
-        "metro": 0.29,
-        "regional": 0.12,
-        "source": "Derived (NAIC ratio)"
-      },
-      {
-        "state": "Tasmania",
-        "metro": 0.25,
-        "regional": 0.11,
-        "source": "Derived (NAIC ratio)"
-      },
-      {
-        "state": "Australian Capital Territory",
-        "metro": 0.39,
-        "regional": 0.17,
-        "source": "Derived (NAIC ratio)"
-      },
-      {
-        "state": "Northern Territory",
-        "metro": 0.24,
-        "regional": 0.1,
-        "source": "Derived (NAIC ratio)"
-      }
-    ]
+    "url": "data/metro_regional_adoption.csv"
   },
   "transform": [
     {

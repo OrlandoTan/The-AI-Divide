@@ -49,40 +49,7 @@
       "lookup": "properties.STE_NAME16",
       "from": {
         "data": {
-          "values": [
-            {
-              "state": "Victoria",
-              "ai_adoption": 0.72
-            },
-            {
-              "state": "New South Wales",
-              "ai_adoption": 0.68
-            },
-            {
-              "state": "Queensland",
-              "ai_adoption": 0.61
-            },
-            {
-              "state": "Western Australia",
-              "ai_adoption": 0.59
-            },
-            {
-              "state": "South Australia",
-              "ai_adoption": 0.55
-            },
-            {
-              "state": "Tasmania",
-              "ai_adoption": 0.48
-            },
-            {
-              "state": "Australian Capital Territory",
-              "ai_adoption": 0.75
-            },
-            {
-              "state": "Northern Territory",
-              "ai_adoption": 0.46
-            }
-          ]
+          "url": "data/AdoptionState.csv"
         },
         "key": "state",
         "fields": [

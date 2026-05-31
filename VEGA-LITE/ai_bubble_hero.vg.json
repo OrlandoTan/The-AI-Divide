@@ -31,72 +31,14 @@
   "data": [
     {
       "name": "table",
-      "values": [
-        {
-          "state": "Australian Capital Territory",
-          "state_code": "ACT",
-          "ai_adoption": 0.75,
-          "ai_companies": 19,
-          "adoption_norm": 1.0,
-          "companies_norm": 0.062
-        },
-        {
-          "state": "Victoria",
-          "state_code": "VIC",
-          "ai_adoption": 0.72,
-          "ai_companies": 254,
-          "adoption_norm": 0.897,
-          "companies_norm": 0.833
-        },
-        {
-          "state": "New South Wales",
-          "state_code": "NSW",
-          "ai_adoption": 0.68,
-          "ai_companies": 305,
-          "adoption_norm": 0.759,
-          "companies_norm": 1.0
-        },
-        {
-          "state": "Queensland",
-          "state_code": "QLD",
-          "ai_adoption": 0.61,
-          "ai_companies": 144,
-          "adoption_norm": 0.517,
-          "companies_norm": 0.472
-        },
-        {
-          "state": "Western Australia",
-          "state_code": "WA",
-          "ai_adoption": 0.59,
-          "ai_companies": 85,
-          "adoption_norm": 0.448,
-          "companies_norm": 0.279
-        },
-        {
-          "state": "South Australia",
-          "state_code": "SA",
-          "ai_adoption": 0.55,
-          "ai_companies": 51,
-          "adoption_norm": 0.31,
-          "companies_norm": 0.167
-        },
-        {
-          "state": "Tasmania",
-          "state_code": "TAS",
-          "ai_adoption": 0.48,
-          "ai_companies": 0,
-          "adoption_norm": 0.069,
-          "companies_norm": 0.0
-        },
-        {
-          "state": "Northern Territory",
-          "state_code": "NT",
-          "ai_adoption": 0.46,
-          "ai_companies": 0,
-          "adoption_norm": 0.0,
-          "companies_norm": 0.0
+      "url": "data/ai_companies_by_state.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "ai_companies": "number",
+          "ai_adoption": "number"
         }
-      ],
+      },
       "transform": [
         {
           "type": "filter",

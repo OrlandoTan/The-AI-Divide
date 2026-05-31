@@ -23,58 +23,7 @@
     }
   },
   "data": {
-    "values": [
-      {
-        "year": "2015",
-        "pct": 0.2,
-        "note": "Exact \u2014 stated in report"
-      },
-      {
-        "year": "2016",
-        "pct": 0.3,
-        "note": "Estimated from Figure 16b"
-      },
-      {
-        "year": "2017",
-        "pct": 0.3,
-        "note": "Estimated from Figure 16b"
-      },
-      {
-        "year": "2018",
-        "pct": 0.4,
-        "note": "Estimated from Figure 16b"
-      },
-      {
-        "year": "2019",
-        "pct": 0.6,
-        "note": "Estimated from Figure 16b"
-      },
-      {
-        "year": "2020",
-        "pct": 0.6,
-        "note": "Estimated from Figure 16b"
-      },
-      {
-        "year": "2021",
-        "pct": 1.0,
-        "note": "Exact \u2014 stated in report"
-      },
-      {
-        "year": "2022",
-        "pct": 0.9,
-        "note": "Estimated from Figure 16b"
-      },
-      {
-        "year": "2023",
-        "pct": 0.8,
-        "note": "Estimated from Figure 16b"
-      },
-      {
-        "year": "2024",
-        "pct": 0.9,
-        "note": "Exact \u2014 stated in report"
-      }
-    ]
+    "url": "data/demand.csv"
   },
   "layer": [
     {

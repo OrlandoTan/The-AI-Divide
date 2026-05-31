@@ -23,68 +23,7 @@
     }
   },
   "data": {
-    "values": [
-      {
-        "sector": "Business processes & support",
-        "companies": 494,
-        "ai_job_pct": 2.3,
-        "anzsic_match": "Professional, scientific & technical"
-      },
-      {
-        "sector": "IT infrastructure & hosting",
-        "companies": 346,
-        "ai_job_pct": 4.2,
-        "anzsic_match": "Information media & telecoms"
-      },
-      {
-        "sector": "Media, social & marketing",
-        "companies": 255,
-        "ai_job_pct": 0.6,
-        "anzsic_match": "Arts & recreation services"
-      },
-      {
-        "sector": "Healthcare & biotech",
-        "companies": 184,
-        "ai_job_pct": 0.8,
-        "anzsic_match": "Healthcare & social assistance"
-      },
-      {
-        "sector": "Education & training",
-        "companies": 166,
-        "ai_job_pct": 2.6,
-        "anzsic_match": "Education & training"
-      },
-      {
-        "sector": "Digital security",
-        "companies": 163,
-        "ai_job_pct": 0.7,
-        "anzsic_match": "Public administration & safety"
-      },
-      {
-        "sector": "Financial & insurance",
-        "companies": 132,
-        "ai_job_pct": 2.1,
-        "anzsic_match": "Financial & insurance services"
-      },
-      {
-        "sector": "Govt, security & defence",
-        "companies": 99,
-        "ai_job_pct": 0.7,
-        "anzsic_match": "Public administration & safety"
-      },
-      {
-        "sector": "Logistics, wholesale & retail",
-        "companies": 93,
-        "ai_job_pct": 0.4,
-        "anzsic_match": "Transport, postal & warehousing"
-      },
-      {
-        "sector": "Environmental services",
-        "companies": 90,
-        "ai_job_pct": 1.1,
-        "anzsic_match": "Electricity, gas, water & waste"
-      }
-    ]
+    "url": "data/ai_sector_scatter.csv"
   },
   "transform": [
     {

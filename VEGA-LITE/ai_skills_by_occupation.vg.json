@@ -22,68 +22,7 @@
     }
   },
   "data": {
-    "values": [
-      {
-        "occupation": "Arts and media professionals",
-        "pct": 7.6,
-        "workers_thousands": 258
-      },
-      {
-        "occupation": "ICT professionals",
-        "pct": 5.1,
-        "workers_thousands": 415
-      },
-      {
-        "occupation": "Education professionals",
-        "pct": 2.8,
-        "workers_thousands": 1073
-      },
-      {
-        "occupation": "Business HR and marketing",
-        "pct": 1.8,
-        "workers_thousands": 863
-      },
-      {
-        "occupation": "Design engineering and science",
-        "pct": 1.4,
-        "workers_thousands": 340
-      },
-      {
-        "occupation": "Chief executives",
-        "pct": 1.1,
-        "workers_thousands": 212
-      },
-      {
-        "occupation": "Specialist managers",
-        "pct": 0.9,
-        "workers_thousands": 724
-      },
-      {
-        "occupation": "Construction trades",
-        "pct": 0.8,
-        "workers_thousands": 594
-      },
-      {
-        "occupation": "Automotive trades",
-        "pct": 0.8,
-        "workers_thousands": 148
-      },
-      {
-        "occupation": "Health professionals",
-        "pct": 0.1,
-        "workers_thousands": 902
-      },
-      {
-        "occupation": "Hospitality workers",
-        "pct": 0.1,
-        "workers_thousands": 744
-      },
-      {
-        "occupation": "Road and rail drivers",
-        "pct": 0.1,
-        "workers_thousands": 321
-      }
-    ]
+    "url": "data/ai_skills_by_occupation.csv"
   },
   "encoding": {
     "y": {
