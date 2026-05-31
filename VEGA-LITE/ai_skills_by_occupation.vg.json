@@ -19,7 +19,7 @@
       "gridWidth": 1
     }
   },
-  "data": { "url": "data/ai_skills_by_occupation.csv" },
+  "data": { "url": "../data/ai_skills_by_occupation.csv" },
   "encoding": {
     "y": {
       "field": "occupation",

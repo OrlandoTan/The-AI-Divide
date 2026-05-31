@@ -13,7 +13,7 @@
   "data": [
     {
       "name": "table",
-      "url": "data/ai_companies_by_state.csv",
+      "url": "../data/ai_companies_by_state.csv",
       "format": {
         "type": "csv",
         "parse": {"ai_companies": "number", "ai_adoption": "number"}
