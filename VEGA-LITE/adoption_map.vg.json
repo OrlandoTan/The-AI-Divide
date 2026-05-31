@@ -39,9 +39,6 @@
       }
     }
   ],
-  "params": [
-    { "name": "state_hover", "select": { "type": "point", "on": "pointerover", "clear": "pointerout" } }
-  ],
   "mark": {
     "type": "geoshape",
     "stroke": "#f7f7f7",
@@ -61,10 +58,6 @@
         "orient": "top-right",
         "offset": 8
       }
-    },
-    "opacity": {
-      "condition": { "param": "state_hover", "empty": true, "value": 1 },
-      "value": 0.5
     },
     "tooltip": [
       { "field": "properties.STE_NAME16", "type": "nominal", "title": "State" },

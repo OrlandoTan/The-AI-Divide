@@ -91,16 +91,6 @@
     }
   ],
 
-  "signals": [
-    {
-      "name": "hovered", "value": null,
-      "on": [
-        { "events": "rect:pointerover", "update": "datum.industry" },
-        { "events": "rect:pointerout",  "update": "null" }
-      ]
-    }
-  ],
-
   "marks": [
     {
       "type": "text",
@@ -112,11 +102,8 @@
           "text": {"field": "industry"},
           "align": {"value": "right"},
           "baseline": {"value": "middle"},
-          "fontSize": {"value": 11}
-        },
-        "update": {
-          "fill": {"signal": "hovered === datum.industry ? '#1a1814' : '#4a4640'"},
-          "fontWeight": {"signal": "hovered === datum.industry ? 700 : 400"}
+          "fontSize": {"value": 11},
+          "fill": {"value": "#4a4640"}
         }
       }
     },
@@ -129,11 +116,8 @@
           "height": {"scale": "y", "band": 1},
           "x": {"scale": "x", "field": "not_aware_start"},
           "x2": {"scale": "x", "field": "not_aware_end"},
-          "tooltip": {"signal": "{'Industry': datum.industry, 'Not aware': datum.not_aware + '%', 'Not adopting': datum.not_adopting + '%', 'Adopting': datum.adopting + '%'}"}
-        },
-        "update": {
           "fill": {"value": "#d4cfc9"},
-          "opacity": {"signal": "hovered === null || hovered === datum.industry ? 1 : 0.35"}
+          "tooltip": {"signal": "{'Industry': datum.industry, 'Not aware': datum.not_aware + '%'}"}
         }
       }
     },
@@ -146,11 +130,8 @@
           "height": {"scale": "y", "band": 1},
           "x": {"scale": "x", "field": "not_adopting_start"},
           "x2": {"scale": "x", "field": "not_adopting_end"},
-          "tooltip": {"signal": "{'Industry': datum.industry, 'Not aware': datum.not_aware + '%', 'Not adopting': datum.not_adopting + '%', 'Adopting': datum.adopting + '%'}"}
-        },
-        "update": {
           "fill": {"value": "#9a9690"},
-          "opacity": {"signal": "hovered === null || hovered === datum.industry ? 1 : 0.35"}
+          "tooltip": {"signal": "{'Industry': datum.industry, 'Not adopting': datum.not_adopting + '%'}"}
         }
       }
     },
@@ -163,11 +144,8 @@
           "height": {"scale": "y", "band": 1},
           "x": {"scale": "x", "field": "adopting_start"},
           "x2": {"scale": "x", "field": "adopting_end"},
-          "tooltip": {"signal": "{'Industry': datum.industry, 'Not aware': datum.not_aware + '%', 'Not adopting': datum.not_adopting + '%', 'Adopting': datum.adopting + '%'}"}
-        },
-        "update": {
           "fill": {"value": "#de1e1c"},
-          "opacity": {"signal": "hovered === null || hovered === datum.industry ? 1 : 0.35"}
+          "tooltip": {"signal": "{'Industry': datum.industry, 'Adopting': datum.adopting + '%'}"}
         }
       }
     },
@@ -181,36 +159,6 @@
           "stroke": {"value": "#1a1814"},
           "strokeWidth": {"value": 1},
           "strokeDash": {"value": [4, 3]}
-        }
-      }
-    },
-    {
-      "type": "text",
-      "encode": {
-        "enter": {
-          "x": {"scale": "x", "value": -33},
-          "y": {"scale": "y", "value": "Distribution", "band": -3},
-          "text": {"value": "← Don't know AI is an option"},
-          "align": {"value": "center"},
-          "fontSize": {"value": 8},
-          "fontStyle": {"value": "italic"},
-          "fill": {"value": "#d4cfc9"},
-          "fontWeight": {"value": "bold"}
-        }
-      }
-    },
-    {
-      "type": "text",
-      "encode": {
-        "enter": {
-          "x": {"scale": "x", "value": 33},
-          "y": {"scale": "y", "value": "Distribution", "band": -3},
-          "text": {"value": "Using AI →"},
-          "align": {"value": "center"},
-          "fontSize": {"value": 8},
-          "fontStyle": {"value": "italic"},
-          "fill": {"value": "#de1e1c"},
-          "fontWeight": {"value": "bold"}
         }
       }
     }

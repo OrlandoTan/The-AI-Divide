@@ -11,9 +11,6 @@
   "layer": [
     {
       "comment": "Waffle squares",
-      "params": [
-        { "name": "sq_hover", "select": { "type": "point", "on": "pointerover", "clear": "pointerout" } }
-      ],
       "mark": {
         "type": "rect",
         "cornerRadius": 2
@@ -48,23 +45,12 @@
           }
         },
         "opacity": {
-          "condition": [
-            { "test": "datum.is_you === 'yes'", "value": 1 },
-            { "param": "sq_hover", "empty": false, "value": 1 }
-          ],
-          "value": 0.75
-        },
-        "strokeWidth": {
-          "condition": { "param": "sq_hover", "empty": false, "value": 2 },
-          "value": 0
-        },
-        "stroke": {
-          "condition": { "param": "sq_hover", "empty": false, "value": "#1a1814" },
-          "value": "transparent"
+          "condition": { "test": "datum.is_you === 'yes'", "value": 1 },
+          "value": 0.85
         },
         "tooltip": [
           { "field": "category", "title": "Status" },
-          { "field": "id",       "title": "Business #" }
+          { "field": "id",       "title": "Square #" }
         ]
       }
     },
